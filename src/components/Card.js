@@ -1,7 +1,8 @@
 import React from "react";
+import Card from "reactstrap";
 
 function Card(props) {
-  return <div>{props.children}</div>;
+  return <Card>{props.children}</Card>;
 }
 
 export default Card;

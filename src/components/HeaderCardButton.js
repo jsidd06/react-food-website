@@ -1,12 +1,13 @@
 import React from "react";
+import { Button } from "reactstrap";
 
 function HeaderCardButton(props) {
   return (
-    <button style={{ width: 150, height: 30 }}>
+    <Button>
       <span>your</span>
       <span> cart items is </span>
       <span> 1</span>
-    </button>
+    </Button>
   );
 }
 
