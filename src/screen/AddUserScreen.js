@@ -1,8 +1,10 @@
 import React, { Fragment, useState } from "react";
+import UserList from "../components/UserList";
 
-function AddUserScreen(props) {
+function AddUserScreen() {
   const [enterUserName, setEnterUserName] = useState();
   const [enterUserAge, setEnterUserAge] = useState();
+  const [addUserData, setAddUserData] = useState([]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -12,16 +14,18 @@ function AddUserScreen(props) {
     if (+enterUserAge < 1) {
       return alert("please enter the value greater then 1");
     }
-    props.onAddHandler(enterUserName, enterUserAge);
     setEnterUserAge("");
     setEnterUserName("");
-  };
-
-  const enterUserNameHandler = (e) => {
-    setEnterUserName(e.target.value);
-  };
-  const enterUserAgeHandler = (e) => {
-    setEnterUserAge(e.target.value);
+    setAddUserData((prev) => {
+      return [
+        ...prev,
+        {
+          name: enterUserName,
+          age: enterUserAge,
+          id: Math.random().toString(),
+        },
+      ];
+    });
   };
 
   return (
@@ -30,17 +34,18 @@ function AddUserScreen(props) {
         <label>user name</label>
         <input
           type="text"
-          onChange={enterUserNameHandler}
+          onChange={(e) => setEnterUserName(e.target.value)}
           value={enterUserName}
         />
         <label>age</label>
         <input
           type="number"
-          onChange={enterUserAgeHandler}
+          onChange={(e) => setEnterUserAge(e.target.value)}
           value={enterUserAge}
         />
         <button>add</button>
       </form>
+      <UserList users={addUserData} />
     </Fragment>
   );
 }
