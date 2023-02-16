@@ -1,10 +1,12 @@
 import React from "react";
-import AddUserScreen from "./screen/AddUserScreen";
+import Header from "./components/Header";
+import MealsScreen from "./screen/MealsScreen";
 
 function App() {
   return (
-    <div>
-      <AddUserScreen />
+    <div style={{ margin: 10 }}>
+      <Header />
+      <MealsScreen />
     </div>
   );
 }

@@ -1,3 +1,1 @@
-# React Functionality Practice
-
-- Props Practice
+# React Food Web Site
