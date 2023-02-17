@@ -7,6 +7,7 @@ import Card from "../screen/Card";
 function AvailableMeals() {
   const mealList = DUMMY_MEALS.map((meal) => (
     <MealsItem
+      id={meal.id}
       key={meal.id}
       name={meal.name}
       description={meal.description}
