@@ -1,10 +1,10 @@
 import React from "react";
-import Header from "./components/Header";
+import Header from "./screen/Header";
 import MealsScreen from "./screen/MealsScreen";
 
 function App() {
   return (
-    <div style={{ margin: 10 }}>
+    <div>
       <Header />
       <MealsScreen />
     </div>
