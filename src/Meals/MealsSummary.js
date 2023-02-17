@@ -1,8 +1,9 @@
 import React from "react";
+import classes from "./MealsSummary.module.css";
 
 function MealsSummary() {
   return (
-    <div>
+    <section className={classes.summary}>
       <h2>Delicious food, Delivered To You</h2>
       <p>
         Food is one of the basic necessities of life. Food contains
@@ -13,7 +14,7 @@ function MealsSummary() {
         Nutrients provide the energy our bodies need to function. The energy in
         food is measured in units called calories.
       </p>
-    </div>
+    </section>
   );
 }
 

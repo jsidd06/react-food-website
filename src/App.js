@@ -1,12 +1,14 @@
 import React from "react";
-import Header from "./screen/Header";
-import MealsScreen from "./screen/MealsScreen";
+import Header from "./Layout/Header";
+import Meals from "./Meals/Meals";
 
 function App() {
   return (
     <div>
       <Header />
-      <MealsScreen />
+      <main>
+        <Meals />
+      </main>
     </div>
   );
 }
